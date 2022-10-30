@@ -1,0 +1,51 @@
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { Card } from './Card';
+import "./billList.css";
+import { toast,ToastContainer } from "react-toastify";
+
+
+export const BillList = () => {
+  const {billList: list} = useSelector((state) => state.bills);
+  const notifySuccess = () => toast.success("Bill Deleted!");
+
+
+  return (
+    <div className="expense-list">
+      <ToastContainer
+        position="bottom-left"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+      />
+      {list.length ? list.map((item) => (
+         <Card item={item} notifySuccess={notifySuccess}/>
+      )) : 
+      <div className="empty-state">
+          <img
+            src='../../assets/photo.jpg'
+            alt="No Expenses"
+            className="empty-image"
+          />
+          <label>Your bill list is empty.</label>
+        </div>
+      }
+  
+      {/* {filteredList.length ? (
+        filteredList.map((item) => (
+          <Card item={item} notifySuccess={notifySuccess} />
+        ))
+      ) : (
+        <div className="empty-state">
+          <img
+            src={require("../../assets/images/empty.png").default}
+            alt="No Expenses"
+            className="empty-image"
+          />
+          <label>Uh Oh! Your expense list is empty.</label>
+        </div>
+      )} */}
+    </div>
+  )
+}

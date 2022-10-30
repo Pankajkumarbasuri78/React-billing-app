@@ -1,10 +1,10 @@
-import { combineReducers, createStore} from "redux";
+import { combineReducers } from "redux";
 import { billReducer } from "../reducers/Reducers";
-
-const reducer = combineReducers({
+import { configureStore } from '@reduxjs/toolkit'
+const reducers = combineReducers({
   bills: billReducer,
 });
 const initialState = {};
-const store = createStore(reducer, initialState);
+const store = configureStore({reducer:reducers}, initialState);
 
 export default store;
