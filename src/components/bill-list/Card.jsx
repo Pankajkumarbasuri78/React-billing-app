@@ -1,4 +1,6 @@
 import React from "react";
+import {AiFillDelete} from "react-icons/ai";
+import { FaBullseye } from "react-icons/fa";
 import "./card.css";
 import moment from "moment";
 
@@ -20,11 +22,7 @@ export const Card = ({ item , notifySuccess}) => {
       style={{ borderRight: `6px solid ${item.category.color}` }}
     >
       <div className="card-image-container">
-        {/* <img
-          src={item.category.icon.default}
-          alt={item.category.title}
-          className="card-image"
-        /> */}
+        <FaBullseye size={25} />
       </div>
       <div className="card-info">
         <label className="card-title">{item.title}</label>
@@ -35,8 +33,9 @@ export const Card = ({ item , notifySuccess}) => {
           <label className="card-amount">₹ {item.amount}</label>
         </div>
         <div className="delete-icon" onClick={handleDelete}>
-          {/* <i class="fi-rr-trash"></i> */}
-          Delete
+          <div className="delete">
+          <AiFillDelete />
+          </div>
         </div>
       </div>
     </div>

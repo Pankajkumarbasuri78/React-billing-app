@@ -1,6 +1,7 @@
 .home {
     width: 50%;
     margin: auto;
+    background-color: rgb(31, 184, 204);
   }
   
   @media only screen and (max-width: 1024px) {

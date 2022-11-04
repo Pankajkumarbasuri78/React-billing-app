@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { AiOutlineSearch, AiOutlineFolderAdd } from "react-icons/ai";
 import "./topBar.css";
 import { useDispatch } from "react-redux";
 import { searchBill } from "../../redux/actions/Actions";
@@ -15,7 +16,9 @@ export const TopBar = () => {
       {window.location.pathname === "/" ? (
         <div className="home-topfold">
           <div className="searchbar">
-            {/* <i class="fi-rr-search"></i> */}
+            <div className="search">
+              <AiOutlineSearch size={20} />
+            </div>
             <input
               placeholder="Search for expenses"
               value={query}
@@ -24,7 +27,9 @@ export const TopBar = () => {
           </div>
           <Link to="/add-bill">
             <div className="add-button">
-              {/* <i class="fi-rr-add"></i> */}
+              <div className="add">
+                <AiOutlineFolderAdd size={25}/>
+              </div>
               <label>Add</label>
             </div>
           </Link>
@@ -33,13 +38,11 @@ export const TopBar = () => {
         <div className="add-topfold">
           <Link to="/">
             <div className="add-topfold-button">
-              {/* <i class="fi-rr-angle-left"></i> */}
               <label>Back</label>
             </div>
           </Link>
           <Link to="/">
             <div className="add-topfold-button">
-              {/* <i class="fi-rr-cross-circle"></i> */}
               <label>Cancel</label>
             </div>
           </Link>

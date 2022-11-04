@@ -15,11 +15,6 @@
     font-size: 32px;
     font-weight: 500;
   }
-  /* .header-logo i {
-    display: flex;
-    align-items: center;
-    margin-left: 6px;
-  } */
   
   .header-button {
     font-size: 20px;
@@ -29,6 +24,7 @@
     border: 1px solid black;
     border-radius: 6px;
     padding: 0px 8px;
+    background-color: rgb(186, 186, 196);
   }
   /* .header-button i {
     margin-right: 4px;

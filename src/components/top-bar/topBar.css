@@ -4,6 +4,7 @@
     margin: 6px 12px;
     padding: 12px 0px;
     align-items: center;
+    
   }
   .home-topfold {
     display: flex;
@@ -26,7 +27,7 @@
     background-color: white;
   }
   
-  .searchbar i {
+  .search {
     display: flex;
     align-items: center;
     margin-left: 6px;
@@ -41,9 +42,11 @@
     padding: 0px 8px;
     border-radius: 6px;
     cursor: pointer;
+    background-color: rgb(18, 18, 139);
+    color:#ffffff;
   }
   
-  .add-button i {
+  .add {
     display: flex;
     align-items: center;
     margin-right: 4px;

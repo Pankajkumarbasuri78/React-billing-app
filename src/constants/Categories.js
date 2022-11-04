@@ -1,25 +1,25 @@
 export const categories = [
     {
       id: 1,
-      title: "Education",
+      title: "Car Wash",
     //   icon: require("../assets/images/education.png"),
       color: "#A95EC2",
     },
     {
       id: 2,
-      title: "Healthcare",
+      title: "Painting",
       //icon: require("../assets/images/healthcare.png"),
       color: "#FF768A",
     },
     {
       id: 3,
-      title: "Shopping",
+      title: "Tyre Dressing",
       //icon: require("../assets/images/shopping.png"),
       color: "#EC60AB",
     },
     {
       id: 4,
-      title: "Food",
+      title: "interior cleaning",
       //icon: require("../assets/images/food.png"),
       color: "#FF9E6D",
     },

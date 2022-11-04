@@ -24,29 +24,10 @@ export const BillList = () => {
          <Card item={item} notifySuccess={notifySuccess}/>
       )) : 
       <div className="empty-state">
-          <img
-            src='../../assets/photo.jpg'
-            alt="No Expenses"
-            className="empty-image"
-          />
+          
           <label>Your bill list is empty.</label>
         </div>
-      }
-  
-      {/* {filteredList.length ? (
-        filteredList.map((item) => (
-          <Card item={item} notifySuccess={notifySuccess} />
-        ))
-      ) : (
-        <div className="empty-state">
-          <img
-            src={require("../../assets/images/empty.png").default}
-            alt="No Expenses"
-            className="empty-image"
-          />
-          <label>Uh Oh! Your expense list is empty.</label>
-        </div>
-      )} */}
+}
     </div>
   )
 }
