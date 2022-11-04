@@ -1,4 +1,4 @@
-import { ADD_BILL, DELETE_BILL } from '../action-types/Bills'
+import { ADD_BILL, DELETE_BILL, SEARCH_BILL } from '../action-types/Bills'
 
 export const addBill = (data) => {
     return {
@@ -12,5 +12,13 @@ export const addBill = (data) => {
     return {
       type: DELETE_BILL,
       data,
+    };
+  };
+
+  export const searchBill = (query) => {
+    //console.log(query);
+    return {
+      type: SEARCH_BILL,
+      query,
     };
   };

@@ -6,7 +6,8 @@ import { toast,ToastContainer } from "react-toastify";
 
 
 export const BillList = () => {
-  const {billList: list} = useSelector((state) => state.bills);
+  const {billList: list, query } = useSelector((state) => state.bills);
+  const filteredList = list.filter((item) => item.title.includes(query));
   const notifySuccess = () => toast.success("Bill Deleted!");
 
 
@@ -19,7 +20,7 @@ export const BillList = () => {
         newestOnTop={false}
         closeOnClick
       />
-      {list.length ? list.map((item) => (
+      {filteredList.length ? filteredList.map((item) => (
          <Card item={item} notifySuccess={notifySuccess}/>
       )) : 
       <div className="empty-state">

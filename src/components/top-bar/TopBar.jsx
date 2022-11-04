@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./topBar.css";
 import { useDispatch } from "react-redux";
-//import { searchExpense } from "../../redux/actions/expenses";
+import { searchBill } from "../../redux/actions/Actions";
 export const TopBar = () => {
   const [query, setQuery] = useState("");
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const handleQuery = (e) => {
     setQuery(e.target.value);
-    // dispatch(searchExpense(e.target.value));
+    dispatch(searchBill(e.target.value));
   };
   return (
     <div className="topfold">
